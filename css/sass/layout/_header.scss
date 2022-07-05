@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+/*start upper nav*/
+
+.upperHeader {
+    background-color: #231f20;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 13px;
+    i {
+        color: $mainColor;
+        padding-right: 10px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-40%);
+    }
+    .theRight {
+        span:not(:last-of-type) {
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        span:not(:last-of-type) {
+            padding: 0 10px;
+        }
+        span:last-of-type {
+            padding-right: 10px;
+        }
+        span:first-of-type {
+            padding-right: 0 !important;
+        }
+    }
+    @media (max-width:1200px) {
+        font-size: 12px;
+    }
+    .theLeft {
+        @media (max-width:992px) {
+            margin: 10px 0;
+            justify-content: center;
+        }
+    }
+    span {
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+    }
+    span:hover {
+        color: $mainColor;
+    }
+}
+
+/*End upper nav*/
+
+/*start mainbar*/
+
+.mainNav {
+    padding: 20px 0;
+    .logo {
+        position: relative;
+        top: 50%;
+        transform: translateY(-10%);
+    }
+    .menu {
+        justify-content: space-between;
+        ul {
+            width: 40%;
+            justify-content: space-between;
+            li {
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                &:hover, &.active {
+                    color: $mainColor;
+                }
+            }
+            @media (max-width:1200px) {
+                width: 50%;
+            }
+            @media (max-width:992px) {
+                width: 70%;
+            }
+        }
+        .fa-facebook {
+            margin-left: 20px;
+        }
+        i {
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+    }
+    .navM {
+        i {
+            font-size: 24px;
+            color: $mainColor;
+            cursor: pointer;
+        }
+    }
+}
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba($mainColor, 0.5);
+    .sideBar {
+        position: fixed;
+        width: 280px;
+        height: 100%;
+        left: -100%;
+        transition: all .4s ease-in-out;
+        background: $mainColor;
+        box-shadow: 4px 0 8px rgba(97, 90, 92, 0.7);
+        .close {
+            width: 50px;
+            height: 45px;
+            border-left: 1px solid white;
+            border-bottom: 1px solid white;
+            color: #fff ;
+            opacity: 1 !important;
+            border-bottom-left-radius: 15px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .list {
+            margin-top: 80px;
+            .item.active,
+            .item:hover {
+                color: #fff;
+            }
+            .item {
+                font-size: 22px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+            }
+            .icons {
+                i:hover {
+                    color: #fff;
+                    border: 1px solid #fff;
+                }
+                i {
+                    font-size: 22px;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+                    border: 1px solid #000;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                margin-bottom: 60px;
+            }
+            .numbers,
+            .works ,
+            .location {
+                width: 90%;
+                margin: auto;
+                margin-top: 15px;
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    color: #fff;
+                    transition: all .3s ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        color: #000;
+                    }
+                }
+                i {
+                    color: #fff;
+                }
+                div:first-of-type {
+                    width: 80%;
+                    text-align: center;
+                }
+            }
+            .numbers {
+               span {
+                   display: block;
+               }
+              
+            }
+        }
+    }
+}
+
+
+/*End main bar*/
