@@ -1,4 +1,4 @@
-## Elnagar
+# Elnagar
 
 # Website demo
 https://salem382.github.io/Elnagar/
